@@ -1,4 +1,4 @@
-![pieSparrow](images/logo_small.png)
+![pieSparrow](https://piesparrow.itsdaniyalm.com/images/logo_small.png)
 
 Version - Alpha 0.0.1, Release Date - 28-Nov-22
 
@@ -6,7 +6,7 @@ Version - Alpha 0.0.1, Release Date - 28-Nov-22
 
 ---
 pieSparrow is a stupidly simple python package to create interactive HTML frontends and dashboards. t is built on top of the robust javascript charting library Chart.js while harnessing the power of light weight Milligram CSS framework for styling and data processing capabilities of Python through Pandas.
-![pieSparrow Code](images/header.png)
+![pieSparrow Code](https://piesparrow.itsdaniyalm.com/images/header.png)
 
 ## Code in Python deliver in HTML
 Just import pieSparrow into your python script and perform data processingthrough Pandas as usual. When you are ready to visualize, call the relatedfunctions from pieSparrow to design your interactive dashboards and compose the HTML files by running your parent script in Python.
@@ -73,5 +73,5 @@ ps.row(
 See the [Website](https://piesparrow.itsdaniyalm.com) , [Docs](https://piesparrow.itsdaniyalm.com/docs.html) or [Examples](https://piesparrow.itsdaniyalm.com/examples.html) to learn more.
 
 ---
-copyrights © 2022 | version alpha 0.0.1 developed by [Daniyal M](https://itsdaniyalm.com), released under MIT License
+copyrights © 2022 | version alpha 0.0.1 developed by [Daniyal M](https://itsdaniyalm.com), released under MIT License.
 
