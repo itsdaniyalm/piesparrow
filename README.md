@@ -1,6 +1,6 @@
 ![pieSparrow](https://piesparrow.itsdaniyalm.com/images/logo_small.png)
 
-Version - Alpha 0.0.1, Release Date - 28-Nov-22
+Version - Alpha 0.0.2, Release Date - 28-Nov-22
 
 [Website](https://piesparrow.itsdaniyalm.com) | [Docs](https://piesparrow.itsdaniyalm.com/docs.html) | [Examples](https://piesparrow.itsdaniyalm.com/examples.html) | [GitHub](https://github.com/itsdaniyalm/piesparrow)
 
@@ -73,5 +73,5 @@ ps.row(
 See the [Website](https://piesparrow.itsdaniyalm.com) , [Docs](https://piesparrow.itsdaniyalm.com/docs.html) or [Examples](https://piesparrow.itsdaniyalm.com/examples.html) to learn more.
 
 ---
-copyrights © 2022 | version alpha 0.0.1 developed by [Daniyal M](https://itsdaniyalm.com), released under MIT License.
+copyrights © 2022 | version alpha 0.0.2 developed by [Daniyal M](https://itsdaniyalm.com), released under MIT License.
 
