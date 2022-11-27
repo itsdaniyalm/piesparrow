@@ -1,5 +1,5 @@
 #######################################################
-# pieSparrow - alpha 0.0.1                            #
+# pieSparrow - alpha 0.0.5                           #
 # developed by - Daniyal M (https://itsdaniyalm.com)  #
 # docs - https://piesparrow.itsdaniyalm.com/docs.html #
 #######################################################

@@ -1,3 +1,18 @@
+Metadata-Version: 2.1
+Name: piesparrow
+Version: 0.0.5
+Summary: pieSparrow is a stupidly simple python package to create interactive HTML frontends and dashboards from Python environment. 
+Author-email: Daniyal M <hello@itsdaniyalm.com>
+Project-URL: Homepage, https://piesparrow.itsdaniyalm.com
+Project-URL: Bug Tracker, https://github.com/itsdaniyalm/piesparrow/issues
+Keywords: python,html,frontend,dashboard,data analysis,visualization,website,charts,javascript
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 ![pieSparrow](https://piesparrow.itsdaniyalm.com/images/logo_small.png)
 
 Version - Alpha 0.0.5, Release Date - 27-Nov-22
