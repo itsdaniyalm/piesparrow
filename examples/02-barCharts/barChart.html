@@ -1,0 +1,128 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example of Bar Chart</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+    
+        <div><a href='https://piesparrow.itsdaniyalm.com' title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/new_icon.png" height="30" align="right"></a></div>
+        </head>
+        <body>
+        
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100">
+    <h2>Example of a Bar Chart in pieSparrow</h2>
+    </div>
+    </div>
+    </div>
+    
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100"><table ">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Rank</th>
+      <th>City</th>
+      <th>Population 2020</th>
+      <th>Population 2021</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Karachi</td>
+      <td>16.09</td>
+      <td>16.46</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Lahore</td>
+      <td>12.64</td>
+      <td>13.10</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Faisalabad</td>
+      <td>3.46</td>
+      <td>3.54</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Gujranwala</td>
+      <td>2.23</td>
+      <td>2.29</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Rawalpindi</td>
+      <td>2.24</td>
+      <td>2.28</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div>
+    </div>
+    </div>
+    
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100">
+    <div><canvas id='Population of Pakistani Cities' width='100' height='70'></canvas></div>
+    <script>
+        const ctx = document.getElementById('Population of Pakistani Cities');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Karachi', 'Lahore', 'Faisalabad', 'Gujranwala', 'Rawalpindi'],
+            datasets: [{
+              label: 'Population in 2020',
+              data: [16.09, 12.64, 3.46, 2.23, 2.24],
+              borderWidth: 0,
+              backgroundColor: ['#666699', '#3399cc', '#66cc99', '#99cc99', '#ffff99', '#ffcc99', '#ff9966', '#ff6633', '#cc3366'] 
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beingAtZerop: true,
+                display: true,
+                grid: {
+                  display: false
+                }
+            },
+              x: {
+                display: true,
+                grid: {
+                  display: false
+                }
+              }              
+            },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Population of Pakistani Cities'
+                },
+                legend: {
+                    display: false
+                }
+            }
+          }
+        });
+      </script>
+    </div>
+    </div>
+    </div>
+    

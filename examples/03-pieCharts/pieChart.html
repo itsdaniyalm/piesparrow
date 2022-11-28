@@ -1,0 +1,127 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Example of Pie Chart</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+    
+        <div><a href='https://piesparrow.itsdaniyalm.com' title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/new_icon.png" height="30" align="right"></a></div>
+        </head>
+        <body>
+        
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100">
+    <h2>Example of a Pie Chart in pieSparrow</h2>
+    </div>
+    </div>
+    </div>
+    
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100"><table ">
+  <thead>
+    <tr style="text-align: left;">
+      <th>Rank</th>
+      <th>City</th>
+      <th>Population 2020</th>
+      <th>Population 2021</th>
+      <th>Difference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Karachi</td>
+      <td>16.09</td>
+      <td>16.46</td>
+      <td>0.37</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Lahore</td>
+      <td>12.64</td>
+      <td>13.10</td>
+      <td>0.45</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Faisalabad</td>
+      <td>3.46</td>
+      <td>3.54</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Gujranwala</td>
+      <td>2.23</td>
+      <td>2.29</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Rawalpindi</td>
+      <td>2.24</td>
+      <td>2.28</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table></div>
+    </div>
+    </div>
+    
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100">
+    <div><canvas id='Population of Cities' width='100' height='400'></canvas></div>
+    <script>
+        const ctxpie = document.getElementById('Population of Cities');
+        new Chart(ctxpie, {
+          type: 'pie',
+          data: {
+            labels: ['Karachi', 'Lahore', 'Faisalabad', 'Gujranwala', 'Rawalpindi'],
+            datasets: [{
+              data: [16.09, 12.64, 3.46, 2.23, 2.24],
+              backgroundColor: ['#9999ff', '#6666cc', '#666699', '#333366', '#333333', '#663300', '#996633', '#cc9900', '#ffcc00'] 
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beingAtZerop: true,
+                display: false,
+                grid: {
+                  display: false
+                }
+            },
+              x: {
+                display: false,
+                grid: {
+                  display: false
+                }
+              }              
+            },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Population of Cities'
+                },
+                legend: {
+                    display: true
+                }
+            }
+          }
+        });
+      </script>
+    </div>
+    </div>
+    </div>
+    
