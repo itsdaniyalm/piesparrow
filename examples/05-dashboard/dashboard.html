@@ -1,0 +1,136 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leads Dashboard</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+    
+        <div><a href='https://piesparrow.itsdaniyalm.com' title="Made with pySparrow" target="_blank" rel="noopener"><img src="https://raw.githubusercontent.com/itsdaniyalm/pysparrow/master/images/new_icon.png" height="30" align="right"></a></div>
+        </head>
+        <body>
+        
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-100">
+    <h2>Leads Dashboard</h2>
+    </div>
+    </div>
+    </div>
+    
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-35">
+    <p>Total Leads</p>
+    
+    <h3>5188</h3>
+    </div><div class="column column-35">
+    <p>Organic Leads</p>
+    
+    <h3>3631</h3>
+    </div><div class="column column-35">
+    <p>Paid Leads</p>
+    
+    <h3>1557</h3>
+    </div>
+    </div>
+    </div>
+    
+    <div class = "container">
+    <div class = "row">
+    <div class="column column-50">
+    <div><canvas id='Daily Leads Trend' width='100' height='80'></canvas></div>
+    <script>
+        const ctx = document.getElementById('Daily Leads Trend');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['2022-09-08', '2022-09-09', '2022-09-10', '2022-09-11', '2022-09-12', '2022-09-13', '2022-09-14', '2022-09-15', '2022-09-16', '2022-09-17', '2022-09-18', '2022-09-19', '2022-09-20', '2022-09-21', '2022-09-22', '2022-09-23', '2022-09-24', '2022-09-25', '2022-09-26', '2022-09-27', '2022-09-28', '2022-09-29', '2022-09-30', '2022-10-01', '2022-10-02', '2022-10-03', '2022-10-04', '2022-10-05', '2022-10-06', '2022-10-09', '2022-10-10', '2022-10-14', '2022-10-16', '2022-10-19', '2022-10-25'],
+            datasets: [{
+              label: 'Leads',
+              data: [100, 27, 6, 1, 6, 29, 93, 306, 179, 145, 335, 366, 142, 826, 431, 566, 833, 209, 88, 85, 110, 76, 52, 70, 45, 12, 16, 16, 7, 2, 2, 1, 1, 1, 4],
+              borderWidth: 0,
+              backgroundColor: ['#4285F4'] 
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beingAtZerop: true,
+                display: true,
+                grid: {
+                  display: false
+                }
+            },
+              x: {
+                display: true,
+                grid: {
+                  display: false
+                }
+              }              
+            },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Daily Leads Trend'
+                },
+                legend: {
+                    display: false
+                }
+            }
+          }
+        });
+      </script>
+    </div><div class="column column-50">
+    <div><canvas id='Brand Segmentation' width='100' height='400'></canvas></div>
+    <script>
+        const ctxpie = document.getElementById('Brand Segmentation');
+        new Chart(ctxpie, {
+          type: 'pie',
+          data: {
+            labels: ['Dcode', 'Huawei', 'Infinix', 'Itel', 'Nokia', 'OPPO', 'Realme', 'Samsung', 'Tecno', 'Vivo', 'Xiaomi'],
+            datasets: [{
+              data: [180, 7, 644, 597, 370, 20, 517, 1088, 676, 769, 320],
+              backgroundColor: ['#666699', '#3399cc', '#66cc99', '#99cc99', '#ffff99', '#ffcc99', '#ff9966', '#ff6633', '#cc3366'] 
+            }]
+          },
+          options: {
+            maintainAspectRatio: false,
+            scales: {
+              y: {
+                beingAtZerop: true,
+                display: false,
+                grid: {
+                  display: false
+                }
+            },
+              x: {
+                display: false,
+                grid: {
+                  display: false
+                }
+              }              
+            },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Brand Segmentation'
+                },
+                legend: {
+                    display: true
+                }
+            }
+          }
+        });
+      </script>
+    </div>
+    </div>
+    </div>
+    
