@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../pysparrow-dev"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../css"
+		}
+	],
+	"settings": {}
+}

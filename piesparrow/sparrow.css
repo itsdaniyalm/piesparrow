@@ -1,0 +1,80 @@
+html * {
+    font-family: 'Rubik', sans-serif;
+    background-color: #F3F3F3;
+}
+
+body,p,h1,h2,h3,h4,h5 {
+  color: rgb(81, 81, 81);
+}
+
+body,p {
+  font-weight: 300;
+}
+
+#row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10px;
+  padding: 10px;
+}
+
+#card {
+  border-radius: 10px;
+  background: #f3f3f3;
+  box-shadow: 5px 5px 8px #e7e7e7, -5px -5px 8px #ffffff;
+  margin: 10px;
+  padding: 10px;
+}
+
+#box {
+  border-radius: 10px;
+  background: #f3f3f3;
+  margin: 10px;
+  padding: 10px;
+}
+
+th {
+  border: 1px solid;
+  border-color: rgb(180, 180, 180);
+  border-collapse: collapse; 
+  height: 30px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 30px;
+}
+table, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  border-color: rgb(180, 180, 180);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 30px;
+}
+
+#icon {
+  position: fixed;
+  border-radius: 10px;
+  background: #6600cc;
+  box-shadow: 5px 5px 8px #e7e7e7, -5px -5px 8px #ffffff;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  margin: 5px;
+}
+
+ a:link {
+  color: #6600cc;
+}
+
+a:visited {
+  color: rgb(128, 128, 128);
+}
+
+a:hover {
+  color: #c4a2e6;
+}
+
+a:active {
+  color: #2d0158;
+} 
