@@ -1,0 +1,58 @@
+<!-- This is a bar chart example written in Chart JS-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="sparrow.css">
+    <title>Chart JS Bar Chart</title>
+</head>
+<body>
+    <div><canvas id="Bar Chart" width="3" height="1"></canvas></div>
+    <script>
+        const ctx = document.getElementById('Bar Chart');
+        new Chart(ctx,
+        {
+            type: 'bar',
+            data: {
+                labels: ['Karachi', 'Lahore', 'Faisalabad', 'Gujranwala', 'Rawalpindi'],
+                datasets: [{
+                    label: 'Population 2020',
+                    data: ['16.46','13.10','3.54','2.29','2.28'],
+                    borderWidth: 0,
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beingAtZerop: true,
+                        display: true,
+                        grid: {
+                            display: false
+                        }
+                    },
+                    x: {
+                        display: true,
+                        grid: {
+                            display: false
+                        }
+                    }              
+                },
+            plugins: {
+                title: {
+                    align: 'start',
+                    display: true,
+                    text: 'Population of Cities'
+                },
+                legend: {
+                    display: true
+                }
+            }
+        }
+        });
+      </script>
+</body>
+</html>

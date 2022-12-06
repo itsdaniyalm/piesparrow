@@ -3,7 +3,7 @@ import pandas as pd
 
 ps.init(filename='daniyal', title='test')
 
-ps.box(align='center',content=ps.h1(txt='This is Spart'))
+ps.box(align='center',content=ps.h1(txt='This is Sparta'))
 
 ps.card(
     ps.h4('This is the heading')+

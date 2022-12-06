@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="sparrow.css">
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
+    <title>Billboard JS Examples</title>
+</head>
+<body>
+    <div id="card"><div id="areaChart"></div></div>
+    <script>
+    var chart = bb.generate({
+        title: {
+            text: "My example of billboard js chart",
+            position: "left"
+        },
+        data: {
+          columns: [
+          ["Karachi", 16.46],
+          ["Lahore", 13.10]
+          ],
+        types: {
+            Karachi: "bar", 
+            Lahore: "bar",
+          },
+        labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {
+                show: true
+            },
+            y: {
+                show: true
+            }
+        },
+        axis: {
+            x: {
+            label: {
+                text: "x axis label",
+                position: "outer-center",
+                
+            },
+            show: true,
+            type: "category"
+            },
+            y: {
+            label: {
+                text: "Y Label",
+                position: "outer-middle"
+            },
+            show: true
+            }
+        },
+        bindto: "#areaChart"
+      });
+    </script>
+</body>
+</html>
