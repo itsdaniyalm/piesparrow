@@ -5,39 +5,46 @@
 #######################################################
 
 import pandas as pd
-import re
-from psptypo import *
-from psptable import *
+from psptypo import * #Typogrhy module 
+from psptable import * #Dataframe module
+from pspbar import * #Bar Chart module
+from pspline import * #Line chart module
+from psparea import * #Area chart module
+from pspspline import * #spline chart module
 
-# color pallets
-default = ["#ff3399","#cc33ff","#6600cc","#3333cc","#330099","#003399","#3366ff","3399ff","33ccff"]
-beach = ["#99ccff","#99ffff","#009999","#66cccc","#99cccc","#cc9966","#ffcc99","#ffcccc","#ffffcc"]
-forest = ["#333366","#336666","#cc6633","#993300","#99cc66","#999966","#ff6633","#ff9966","#ffcc66"]
-dusktilldawn = ["#9999ff","#6666cc","#666699","#333366","#333333","#663300","#996633","#cc9900","#ffcc00"]
-rainbow = ["#666699","#3399cc","#66cc99","#99cc99","#ffff99","#ffcc99","#ff9966","#ff6633","#cc3366"]
+# Main Themes
+lightsparrow = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/sparrow-light.css"
+local = "billboardjs/sparrow.css"
+
+# Chart Themes
+default = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/default.css"
 
 # Initialization function, must call first before and other functions
-def init(filename='piesparrow', title='My pieSparrow page', icon=True):
+def init(filename, title='My pieSparrow page', pagetheme=lightsparrow, charttheme=default, icon=True):
     head = f'''
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width", initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <link rel="stylesheet" href="sparrow.css">
-        <title>{title}</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="{charttheme}">
+    <link rel="stylesheet" href="{pagetheme}">
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
+    <title>{title}</title>
     '''
     if icon == True:
         branding = '''
-        <img id="icon" src="http://piesparrow.itsdaniyalm.com/images/made.png" width="100">
-        </head>
+    <img id="icon" src="http://piesparrow.itsdaniyalm.com/images/made.png" width="100">
+</head>
+<body>
         '''
     else:
         branding = '''
         </head>
+        <body>
         '''
     global filen
     filen = filename + '.html'
@@ -46,23 +53,60 @@ def init(filename='piesparrow', title='My pieSparrow page', icon=True):
     file.write(head+branding)
 
 # box
-def box(content, align='left'):
+def box(content):
     start = f'''
-    <div id="box" align="{align}">
+    <div id="box">
     '''
     end = f'''
     </div>
     '''
     html = start + content + end
-    file.write(html)
+    return html
 
 # card
-def card(content, align='left'):
+def card(content):
     start = f'''
-    <div id="card" align="{align}">
+    <div id="card">
     '''
     end = f'''
     </div>
     '''
-    html = start + content + end
+    html = start+content+ end
+    return html
+
+def colxs(content, align='center'):
+    start = f'''<div class="col-xs" align="{align}">'''
+    end = f'''</div>'''
+    html = start+content+end
+    return html
+
+def colsm(content, align='center'):
+    start = f'''<div class="col-sm" align="{align}">'''
+    end = f'''</div>'''
+    html = start+content+end
+    return html
+
+def colmd(content, align='center'):
+    start = f'''<div class="col-md" align="{align}">'''
+    end = f'''</div>'''
+    html = start+content+end
+    return html
+
+def collg(content, align='center'):
+    start = f'''<div class="col-lg" align="{align}">'''
+    end = f'''</div>'''
+    html = start+content+end
+    return html
+
+def colxl(content, align='center'):
+    start = f'''<div class="col-xl" align="{align}">'''
+    end = f'''</div>'''
+    html = start+content+end
+    return html
+
+def row(content=()):
+    start = '''<div class="row">'''
+    end = '''</div>'''
+    cont = str(content)
+    html = start + cont + end
     file.write(html)

@@ -1,10 +1,10 @@
 html * {
     font-family: 'Rubik', sans-serif;
-    background-color: #ffffff;
+    background-color: #1e1e1e;
 }
 
 body,p,h1,h2,h3,h4,h5 {
-  color: rgb(81, 81, 81);
+  color: rgb(242, 242, 242);
 }
 
 body,p {
@@ -13,22 +13,22 @@ body,p {
 
 #row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: 10px;
   padding: 10px;
 }
 
 #card {
   border-radius: 10px;
-  background: #ffffff;
-  box-shadow: 5px 5px 8px #e7e7e7, -5px -5px 8px #f3f3f3;
+  background: #1e1e1e;
+  box-shadow: 5px 5px 8px #171717, -5px -5px 8px #2e2e2e;
   margin: 10px;
   padding: 10px;
 }
 
 #box {
   border-radius: 10px;
-  background: #ffffff;
+  background: #1e1e1e;
   margin: 10px;
   padding: 10px;
 }
@@ -37,7 +37,7 @@ th {
   border: 1px solid;
   border-color: rgb(180, 180, 180);
   border-collapse: collapse;
-  background-color: #e7e7e7; 
+  background-color: #484848; 
   height: 30px;
   text-align: left;
   padding-left: 5px;
@@ -57,7 +57,7 @@ table, td {
   position: fixed;
   border-radius: 10px;
   background: #6600cc;
-  box-shadow: 5px 5px 8px #e7e7e7, -5px -5px 8px #ffffff;
+  box-shadow: 5px 5px 8px #494949, -5px -5px 8px #101010;
   bottom: 0;
   right: 0;
   padding: 5px;
@@ -77,5 +77,5 @@ a:hover {
 }
 
 a:active {
-  color: #2d0158;
+  color: #7e25d6;
 } 

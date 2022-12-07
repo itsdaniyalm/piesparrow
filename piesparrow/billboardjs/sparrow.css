@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+  }
 html * {
     font-family: 'Rubik', sans-serif;
     background-color: #ffffff;
@@ -9,13 +12,6 @@ body,p,h1,h2,h3,h4,h5 {
 
 body,p {
   font-weight: 300;
-}
-
-#row {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 10px;
-  padding: 10px;
 }
 
 #card {
@@ -79,3 +75,21 @@ a:hover {
 a:active {
   color: #2d0158;
 } 
+
+.col-xs {width: 20%;}
+.col-sm {width: 30%;}
+.col-md {width: 40%;}
+.col-lg {width: 48.5%;}
+.col-xl {width: 98%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  border: 0px solid red;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
