@@ -231,7 +231,7 @@
     .bb-chart-arcs .bb-levels circle {
       fill: none;
       stroke: #848282;
-      stroke-width: .5px; }
+      stroke-width: 0.5px; }
     .bb-chart-arcs .bb-levels text {
       fill: #848282; }
   
@@ -240,7 +240,7 @@
   
   .bb-chart-arc path {
     stroke: #000;
-    stroke-width: 0.5px; }
+    stroke-width: 0px; }
   
   .bb-chart-arc rect {
     stroke: #fff;

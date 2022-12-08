@@ -6,7 +6,7 @@ def spline(title, df, columns, xcolumn, datalabels='true', zoom='true', legend='
     z=''
     for column in columns:
         lst = df[column].to_list()
-        z = z + f'''{column}:{lst},'''
+        z = z + f'''"{column}":{lst},'''
     a = '{'+z+'}'
     content = f'''
     <div id="{title}"></div>
@@ -38,6 +38,7 @@ def spline(title, df, columns, xcolumn, datalabels='true', zoom='true', legend='
                     positon: "outer-center"
                 }},
                 show: true,
+                type: "category"
             }},
             y:{{
                 label: {{

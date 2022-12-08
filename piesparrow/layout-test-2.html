@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/default.css">
+    <link rel="stylesheet" href="billboardjs/sparrow.css">
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
+    <title>Layout Test 2</title>
+    
+    <img id="icon" src="http://piesparrow.itsdaniyalm.com/images/made.png" width="100">
+</head>
+<body>
+        <div class="row"><div id="card" class="col-lg" align="left">
+    <h2>This is Bar Chart</h2>
+    </div><div id="card" class="col-lg" align="left">
+    <h2>This is Line Chart</h2>
+    </div></div><div class="row"><div id="card" class="col-lg" align="center">
+    <div id="bar"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:500},
+        data: {
+            x: "Year",
+            json: {"Year":[1972, 1981, 1998, 2017],"Sindh":[14.15, 14.15, 19.02, 30.43],"Balochistan":[2.42, 4.33, 6.56, 12.33],} ,
+            type: "bar",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#bar'
+        });
+    </script>
+    </div><div id="card" class="col-lg" align="center">
+    <div id="line"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:500},
+        data: {
+            x: "Year",
+            json: {"Year":[1972, 1981, 1998, 2017],"Sindh":[14.15, 14.15, 19.02, 30.43],} ,
+            type: "line",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#line'
+        });
+    </script>
+    </div></div><div class="row"><div id="card" class="col-md" align="left">
+    <h2>This is Pie Chart</h2>
+    
+    <div id="pie"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:300},
+        data: {
+            json: {"Balochistan":[2.42, 4.33, 6.56, 12.33],"Sindh":[14.15, 14.15, 19.02, 30.43],"KPK":[8.38, 11.06, 17.74, 30.5],} ,
+            type: "pie"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        bindto:'#pie'
+        });
+    </script>
+    </div><div id="card" class="col-md" align="left">
+    <h2>This is DonutChart</h2>
+    
+    <div id="donut"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:300},
+        data: {
+            json: {"Balochistan":[2.42, 4.33, 6.56, 12.33],"Sindh":[14.15, 14.15, 19.02, 30.43],"KPK":[8.38, 11.06, 17.74, 30.5],} ,
+            type: "donut"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        bindto:'#donut'
+        });
+    </script>
+    </div></div><div class="row"><div id="card" class="col-xs" align="left">
+    <h2>This is Gauge</h2>
+    
+    <div id="gauge"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:150},
+        data: {
+            columns: [["Data",56]] ,
+            type: "gauge"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        color: {
+            pattern: ["#6600cc"]
+        },
+        bindto:'#gauge'
+        });
+    </script>
+    </div></div><div class="row"><div id="card" class="col-xs" align="center">
+    <div class="row">
+    <p>Balochistan</p>
+    <h1>12.33</h1>
+    <h4 style="color:#8fce00">&#9650;5.77</h4>
+    </div>
+  
+    </div></div><div class="row"><div id="card" class="col-lg" align="center"><table >
+  <thead>
+    <tr >
+      <th>Year</th>
+      <th>Balochistan</th>
+      <th>KPK</th>
+      <th>Punjab</th>
+      <th>Sindh</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1972</td>
+      <td>2.42</td>
+      <td>8.38</td>
+      <td>37.60</td>
+      <td>14.15</td>
+    </tr>
+    <tr>
+      <td>1981</td>
+      <td>4.33</td>
+      <td>11.06</td>
+      <td>47.29</td>
+      <td>14.15</td>
+    </tr>
+    <tr>
+      <td>1998</td>
+      <td>6.56</td>
+      <td>17.74</td>
+      <td>73.62</td>
+      <td>19.02</td>
+    </tr>
+    <tr>
+      <td>2017</td>
+      <td>12.33</td>
+      <td>30.50</td>
+      <td>109.98</td>
+      <td>30.43</td>
+    </tr>
+  </tbody>
+</table></div></div>

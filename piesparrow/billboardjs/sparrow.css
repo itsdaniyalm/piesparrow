@@ -58,6 +58,7 @@ table, td {
   right: 0;
   padding: 5px;
   margin: 5px;
+  z-index: 10000;
 }
 
 a:link {
@@ -76,10 +77,10 @@ a:active {
   color: #2d0158;
 } 
 
-.col-xs {width: 20%;}
-.col-sm {width: 30%;}
-.col-md {width: 40%;}
-.col-lg {width: 48.5%;}
+.col-xs {width: 18%;}
+.col-sm {width: 36%;}
+.col-md {width: 47%;}
+.col-lg {width: 76%;}
 .col-xl {width: 98%;}
 
 [class*="col-"] {

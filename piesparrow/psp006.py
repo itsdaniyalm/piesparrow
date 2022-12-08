@@ -8,19 +8,24 @@ import pandas as pd
 from psptypo import * #Typogrhy module 
 from psptable import * #Dataframe module
 from pspbar import * #Bar Chart module
-from pspline import * #Line chart module
-from psparea import * #Area chart module
-from pspspline import * #spline chart module
+from pspline import * #Line Chart module
+from psparea import * #Area Chart module
+from pspspline import * #Spline Chart module
+from psppie import * #Pie Chart Module
+from pspdonut import * #Donut Chart Module
+from pspgauge import * #Gauge Module
+from pspkpi import * #KPI card
 
 # Main Themes
 lightsparrow = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/sparrow-light.css"
-local = "billboardjs/sparrow.css"
+localbase = "billboardjs/sparrow.css"
 
 # Chart Themes
 default = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/default.css"
+localchart = "billboardjs/default.css"
 
 # Initialization function, must call first before and other functions
-def init(filename, title='My pieSparrow page', pagetheme=lightsparrow, charttheme=default, icon=True):
+def init(filename, title='My pieSparrow page', basetheme=lightsparrow, charttheme=default, icon=True):
     head = f'''
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +36,7 @@ def init(filename, title='My pieSparrow page', pagetheme=lightsparrow, chartthem
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="{charttheme}">
-    <link rel="stylesheet" href="{pagetheme}">
+    <link rel="stylesheet" href="{basetheme}">
     <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
     <title>{title}</title>
     '''
@@ -74,32 +79,32 @@ def card(content):
     html = start+content+ end
     return html
 
-def colxs(content, align='center'):
-    start = f'''<div class="col-xs" align="{align}">'''
+def colxs(content, align='center', type='box'):
+    start = f'''<div id="{type}" class="col-xs" align="{align}">'''
     end = f'''</div>'''
     html = start+content+end
     return html
 
-def colsm(content, align='center'):
-    start = f'''<div class="col-sm" align="{align}">'''
+def colsm(content, align='center', type='box'):
+    start = f'''<div id="{type}" class="col-sm" align="{align}">'''
     end = f'''</div>'''
     html = start+content+end
     return html
 
-def colmd(content, align='center'):
-    start = f'''<div class="col-md" align="{align}">'''
+def colmd(content, align='center', type='box'):
+    start = f'''<div id="{type}" class="col-md" align="{align}">'''
     end = f'''</div>'''
     html = start+content+end
     return html
 
-def collg(content, align='center'):
-    start = f'''<div class="col-lg" align="{align}">'''
+def collg(content, align='center', type='box'):
+    start = f'''<div id="{type}" class="col-lg" align="{align}">'''
     end = f'''</div>'''
     html = start+content+end
     return html
 
-def colxl(content, align='center'):
-    start = f'''<div class="col-xl" align="{align}">'''
+def colxl(content, align='center', type='box'):
+    start = f'''<div id="{type}" class="col-xl" align="{align}">'''
     end = f'''</div>'''
     html = start+content+end
     return html
