@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/sunflower_d.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/base_dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
+    <title>Mock Dashboard - pieSparrow</title>
+    <link rel="icon" type="image/x-icon" href="http://piesparrow.itsdaniyalm.com/images/favicon.png">
+    
+    <a href='http://piesparrow.com' title="Made with piesparrow" target="_blank" rel="noopener"><img id="icon" src="http://piesparrow.itsdaniyalm.com/images/icon.png" width="50">
+</head>
+<body>
+        <div class="row"><div id="box" class="col-xl" align="center">
+    <h1>Mock Dashboard</h1>
+    
+    <p>This dashboard was developed inside Python to demonstrate the functionality of pieSparrow</p>
+    </div></div><div class="row"><div id="box" class="col-xl" align="center">
+    <h2>These are KPI Visuals</h2>
+    </div></div><div class="row"><div id="card" class="col-xs" align="center">
+    <div class="row">
+    <p>Data 1</p>
+    <h1>833</h1>
+    <h4 style="color:#8fce00">&#9650;733</h4>
+    </div>
+  
+    </div><div id="card" class="col-xs" align="center">
+    <div class="row">
+    <p>Data 2</p>
+    <h1>303</h1>
+    <h4 style="color:#f44336">&#9660;-528</h4>
+    </div>
+  
+    </div><div id="card" class="col-xs" align="center">
+    <div class="row">
+    <p>Data 3</p>
+    <h1>970</h1>
+    <h4 style="color:#8fce00">&#9650;530</h4>
+    </div>
+  
+    </div><div id="card" class="col-xs" align="center">
+    <div class="row">
+    <p>Data 4</p>
+    <h1>889</h1>
+    <h4 style="color:#f44336">&#9660;-19</h4>
+    </div>
+  
+    </div><div id="card" class="col-xs" align="center">
+    <div class="row">
+    <p>Data 5</p>
+    <h1>605</h1>
+    <h4 style="color:#f44336">&#9660;-234</h4>
+    </div>
+  
+    </div></div><div class="row"><div id="card" class="col-lg" align="left">
+    <h2>This is Bar Chart</h2>
+    
+    <div id="barchart"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:350},
+        data: {
+            x: "Month",
+            json: {"Month":['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "bar",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#barchart'
+        });
+    </script>
+    </div><div id="card" class="col-xs" align="left">
+    <h2>These are Gauges</h2>
+    
+    <div id="gauge1"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:175},
+        data: {
+            columns: [["Gauge 1",55]] ,
+            type: "gauge"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        color: {
+            pattern: ["#f44336"]
+        },
+        bindto:'#gauge1'
+        });
+    </script>
+    
+    <div id="gauge2"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:175},
+        data: {
+            columns: [["Gauge 2",78]] ,
+            type: "gauge"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        color: {
+            pattern: ["#8fce00"]
+        },
+        bindto:'#gauge2'
+        });
+    </script>
+    </div></div><div class="row"><div id="card" class="col-md" align="left">
+    <h2>This is Line Chart</h2>
+    
+    <div id="line"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:350},
+        data: {
+            x: "Month",
+            json: {"Month":['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "line",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#line'
+        });
+    </script>
+    </div><div id="card" class="col-md" align="left">
+    <h2>This is Donut Chart</h2>
+    
+    <div id="donut"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:350},
+        data: {
+            json: {"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "donut"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        bindto:'#donut'
+        });
+    </script>
+    </div></div><div class="row"><div id="card" class="col-md" align="left">
+    <h2>This is Pie Chart</h2>
+    
+    <div id="pie"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:350},
+        data: {
+            json: {"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "pie"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        bindto:'#pie'
+        });
+    </script>
+    </div><div id="card" class="col-md" align="left">
+    <h2>This is Area Chart</h2>
+    
+    <div id="area"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:350},
+        data: {
+            x: "Month",
+            json: {"Month":['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "area",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#area'
+        });
+    </script>
+    </div></div><div class="row"><div id="card" class="col-md" align="left">
+    <h2>This is Spline Chart</h2>
+    
+    <div id="spline"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:400},
+        data: {
+            x: "Month",
+            json: {"Month":['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "spline",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#spline'
+        });
+    </script>
+    </div><div id="card" class="col-md" align="left">
+    <h2>This is Table showing Dataframe</h2>
+    <div style="overflow-x:auto;"><table >
+  <thead>
+    <tr >
+      <th>Month</th>
+      <th>Data 1</th>
+      <th>Data 2</th>
+      <th>Data 3</th>
+      <th>Data 4</th>
+      <th>Data 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Jan</td>
+      <td>584</td>
+      <td>791</td>
+      <td>381</td>
+      <td>275</td>
+      <td>837</td>
+    </tr>
+    <tr>
+      <td>Feb</td>
+      <td>845</td>
+      <td>387</td>
+      <td>225</td>
+      <td>162</td>
+      <td>135</td>
+    </tr>
+    <tr>
+      <td>Mar</td>
+      <td>486</td>
+      <td>941</td>
+      <td>207</td>
+      <td>423</td>
+      <td>584</td>
+    </tr>
+    <tr>
+      <td>Apr</td>
+      <td>287</td>
+      <td>924</td>
+      <td>422</td>
+      <td>606</td>
+      <td>613</td>
+    </tr>
+    <tr>
+      <td>May</td>
+      <td>701</td>
+      <td>748</td>
+      <td>684</td>
+      <td>206</td>
+      <td>974</td>
+    </tr>
+    <tr>
+      <td>Jun</td>
+      <td>241</td>
+      <td>417</td>
+      <td>175</td>
+      <td>486</td>
+      <td>637</td>
+    </tr>
+    <tr>
+      <td>Jul</td>
+      <td>238</td>
+      <td>339</td>
+      <td>787</td>
+      <td>164</td>
+      <td>283</td>
+    </tr>
+    <tr>
+      <td>Aug</td>
+      <td>419</td>
+      <td>850</td>
+      <td>117</td>
+      <td>743</td>
+      <td>684</td>
+    </tr>
+    <tr>
+      <td>Sept</td>
+      <td>600</td>
+      <td>343</td>
+      <td>262</td>
+      <td>473</td>
+      <td>938</td>
+    </tr>
+    <tr>
+      <td>Oct</td>
+      <td>381</td>
+      <td>930</td>
+      <td>995</td>
+      <td>943</td>
+      <td>824</td>
+    </tr>
+    <tr>
+      <td>Nov</td>
+      <td>100</td>
+      <td>831</td>
+      <td>440</td>
+      <td>908</td>
+      <td>839</td>
+    </tr>
+    <tr>
+      <td>Dec</td>
+      <td>833</td>
+      <td>303</td>
+      <td>970</td>
+      <td>889</td>
+      <td>605</td>
+    </tr>
+  </tbody>
+</table></div></div></div>
