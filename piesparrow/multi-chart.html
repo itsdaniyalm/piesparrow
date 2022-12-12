@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="billboardjs/default.css">
+    <link rel="stylesheet" href="billboardjs/sparrow-dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
+    <title>Multi Chart Test</title>
+    
+    <img id="icon" src="http://piesparrow.itsdaniyalm.com/images/made.png" width="100">
+</head>
+<body>
+        <div class="row">
+    <div id="Multi Chart Test"></div>
+    <script>
+    var chart = bb.generate({
+        size: {height:500},
+        data: {
+            x: "Month",
+            json: {"Month":['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],"Data 1":[584, 845, 486, 287, 701, 241, 238, 419, 600, 381, 100, 833],"Data 2":[791, 387, 941, 924, 748, 417, 339, 850, 343, 930, 831, 303],"Data 3":[381, 225, 207, 422, 684, 175, 787, 117, 262, 995, 440, 970],"Data 4":[275, 162, 423, 606, 206, 486, 164, 743, 473, 943, 908, 889],"Data 5":[837, 135, 584, 613, 974, 637, 283, 684, 938, 824, 839, 605],} ,
+            type: "bar",
+            labels: true
+        },
+        zoom: {
+            enabled: true,
+            type: "drag"
+        },
+        legend: {
+            show: true,
+            position: "bottom"
+        },
+        grid: {
+            x: {show: true},
+            y: {show: true}
+        },
+        axis: {
+            x:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+                type: "category"
+            },
+            y:{
+                label: {
+                    text: "",
+                    positon: "outer-center"
+                },
+                show: true,
+            }
+        },
+        bindto:'#Multi Chart Test'
+        });
+    </script>
+    </div>

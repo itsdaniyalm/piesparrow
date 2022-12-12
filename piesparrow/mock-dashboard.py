@@ -3,7 +3,7 @@ import psp006 as ps
 
 df = pd.read_csv('mock_data.csv')
 
-ps.init(filename='mock-dashboard', title='Mock Dashboard - pieSparrow', basetheme=ps.localbase, charttheme=ps.localchart)
+ps.init(filename='mock-dashboard-dark', title='Mock Dashboard - pieSparrow', basetheme=ps.localdark, charttheme=ps.localsparrowdark)
 
 ps.row(
         ps.colxl(ps.h1('Mock Dashboard')+ps.p('This dashboard was developed inside Python to demonstrate the functionality of pieSparrow'), align='center')

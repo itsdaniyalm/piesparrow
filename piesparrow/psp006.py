@@ -15,14 +15,18 @@ from psppie import * #Pie Chart Module
 from pspdonut import * #Donut Chart Module
 from pspgauge import * #Gauge Module
 from pspkpi import * #KPI card
+from pspchart import * #Multi chart widget (Bar, Line, Spline, Area)
 
 # Main Themes
 lightsparrow = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/sparrow-light.css"
-localbase = "billboardjs/sparrow.css"
+locallight = "billboardjs/sparrow.css"
+localdark = "billboardjs/sparrow-dark.css"
 
 # Chart Themes
 default = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/default.css"
-localchart = "billboardjs/default.css"
+localsparrow = "billboardjs/default.css"
+localrainbow = "billboardjs/rainbow.css"
+localsparrowdark = "billboardjs/defaultdark.css"
 
 # Initialization function, must call first before and other functions
 def init(filename, title='My pieSparrow page', basetheme=lightsparrow, charttheme=default, icon=True):

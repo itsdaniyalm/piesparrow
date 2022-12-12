@@ -1,34 +1,30 @@
+* {
+  box-sizing: border-box;
+  }
 html * {
     font-family: 'Rubik', sans-serif;
-    background-color: #1e1e1e;
+    background-color: #171717;
 }
 
 body,p,h1,h2,h3,h4,h5 {
-  color: rgb(242, 242, 242);
+  color: rgb(255, 255, 255);
 }
 
 body,p {
   font-weight: 300;
 }
 
-#row {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 10px;
-  padding: 10px;
-}
-
 #card {
   border-radius: 10px;
-  background: #1e1e1e;
-  box-shadow: 5px 5px 8px #171717, -5px -5px 8px #2e2e2e;
+  background: #171717;
+  box-shadow: 5px 5px 8px #030303, -5px -5px 8px #2b2b2b;
   margin: 10px;
   padding: 10px;
 }
 
 #box {
   border-radius: 10px;
-  background: #1e1e1e;
+  background: #171717;
   margin: 10px;
   padding: 10px;
 }
@@ -37,7 +33,7 @@ th {
   border: 1px solid;
   border-color: rgb(180, 180, 180);
   border-collapse: collapse;
-  background-color: #484848; 
+  background-color: #414040; 
   height: 30px;
   text-align: left;
   padding-left: 5px;
@@ -57,11 +53,12 @@ table, td {
   position: fixed;
   border-radius: 10px;
   background: #6600cc;
-  box-shadow: 5px 5px 8px #494949, -5px -5px 8px #101010;
+  box-shadow: 5px 5px 8px #030303, -5px -5px 8px #2b2b2b;;
   bottom: 0;
   right: 0;
   padding: 5px;
   margin: 5px;
+  z-index: 10000;
 }
 
 a:link {
@@ -77,5 +74,23 @@ a:hover {
 }
 
 a:active {
-  color: #7e25d6;
+  color: #2d0158;
 } 
+
+.col-xs {width: 18%;}
+.col-sm {width: 36%;}
+.col-md {width: 47%;}
+.col-lg {width: 76%;}
+.col-xl {width: 98%;}
+
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+  border: 0px solid red;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
