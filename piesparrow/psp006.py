@@ -7,10 +7,6 @@
 import pandas as pd
 from psptypo import * #Typogrhy module 
 from psptable import * #Dataframe module
-from pspbar import * #Bar Chart module
-from pspline import * #Line Chart module
-from psparea import * #Area Chart module
-from pspspline import * #Spline Chart module
 from psppie import * #Pie Chart Module
 from pspdonut import * #Donut Chart Module
 from pspgauge import * #Gauge Module
@@ -19,14 +15,13 @@ from pspchart import * #Multi chart widget (Bar, Line, Spline, Area)
 
 # Main Themes
 lightsparrow = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/sparrow-light.css"
-locallight = "billboardjs/sparrow.css"
-localdark = "billboardjs/sparrow-dark.css"
+loclight = "billboardjs/base_light.css"
+locdark = "billboardjs/base_dark.css"
 
 # Chart Themes
 default = "https://cdn.jsdelivr.net/gh/itsdaniyalm/piesparrow-styles@main/default.css"
-localsparrow = "billboardjs/default.css"
-localrainbow = "billboardjs/rainbow.css"
-localsparrowdark = "billboardjs/defaultdark.css"
+locrainbowl = "billboardjs/rainbow_l.css"
+locrainbowd= "billboardjs/rainbow_d.css"
 
 # Initialization function, must call first before and other functions
 def init(filename, title='My pieSparrow page', basetheme=lightsparrow, charttheme=default, icon=True):
@@ -43,10 +38,11 @@ def init(filename, title='My pieSparrow page', basetheme=lightsparrow, chartthem
     <link rel="stylesheet" href="{basetheme}">
     <script src="https://cdn.jsdelivr.net/npm/billboard.js@3.6.3/dist/billboard.min.js"></script>
     <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="http://piesparrow.itsdaniyalm.com/images/favicon.png">
     '''
     if icon == True:
         branding = '''
-    <img id="icon" src="http://piesparrow.itsdaniyalm.com/images/made.png" width="100">
+    <a href='http://piesparrow.com' title="Made with piesparrow" target="_blank" rel="noopener"><img id="icon" src="http://piesparrow.itsdaniyalm.com/images/icon.png" width="50">
 </head>
 <body>
         '''

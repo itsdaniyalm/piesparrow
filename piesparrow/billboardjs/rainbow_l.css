@@ -8,9 +8,10 @@
  * @version 3.6.3
  */
 /*-- Datalab Theme --*/
-/*-- Default color pattern --*/
+/*-- Rainbow Light color pattern --*/
+
 .bb-color-pattern {
-    background-image: url("#666699;#3399cc;#66cc99;#99cc99;#ffff99;#ffcc99;#ff9966;#ff6633;#cc3366"); }
+    background-image: url("#FF595E;#FFCA3A;#8AC926;#1982C4;#6A4C93;#FF9999;#FFCC66;#99CC66;#6699CC;#996699"); }
   
   /*-- Chart --*/
   .bb svg {
@@ -134,7 +135,9 @@
   
   /*-- Title --*/
   .bb-title {
-    font-size: 14px; }
+    font-size: 4em;
+    font-weight: 600;
+   }
   
   /*-- Tooltip --*/
   .bb-tooltip-container {
@@ -229,7 +232,7 @@
     .bb-chart-arcs .bb-levels circle {
       fill: none;
       stroke: #848282;
-      stroke-width: .5px; }
+      stroke-width: 0.5px; }
     .bb-chart-arcs .bb-levels text {
       fill: #848282; }
   
@@ -238,7 +241,7 @@
   
   .bb-chart-arc path {
     stroke: #000;
-    stroke-width: 0.5px; }
+    stroke-width: 0px; }
   
   .bb-chart-arc rect {
     stroke: #fff;

@@ -8,9 +8,10 @@
  * @version 3.6.3
  */
 /*-- Datalab Theme --*/
-/*-- Default color pattern --*/
+/*-- Rainbow Light color pattern --*/
+
 .bb-color-pattern {
-    background-image: url("#ff3399;#cc33ff;#6600cc;#3333cc;#330099;#003399;#3366ff;#3399ff;#33ccff"); }
+    background-image: url("#440154;#482574;#414486;#355F8D;#2B788E;#21908C;#25A884;#45BE71;#BCDE2C;#FDE725"); }
   
   /*-- Chart --*/
   .bb svg {

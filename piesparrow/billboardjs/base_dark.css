@@ -38,6 +38,7 @@ th {
   text-align: left;
   padding-left: 5px;
   padding-right: 30px;
+  color: #ffff;
 }
 table, td {
   border: 1px solid;
@@ -47,17 +48,13 @@ table, td {
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 30px;
+  color: #ffff
 }
 
 #icon {
   position: fixed;
-  border-radius: 10px;
-  background: #6600cc;
-  box-shadow: 5px 5px 8px #030303, -5px -5px 8px #2b2b2b;;
   bottom: 0;
   right: 0;
-  padding: 5px;
-  margin: 5px;
   z-index: 10000;
 }
 

@@ -1,6 +1,6 @@
 import pandas as pd
 
-def chart(title, df, columns, xcolumn,xaxistype='category', charttype='bar',datalabels='true', zoom='true', legend='true', legendposition='bottom', grid='true', xlabel='', ylabel='', height=500):
+def chart(title, df, columns, xcolumn,xaxistype='category', type='bar',datalabels='true', zoom='true', legend='true', legendposition='bottom', grid='true', xlabel='', ylabel='', height=500):
     z=''
     for column in columns:
         lst = df[column].to_list()
@@ -14,7 +14,7 @@ def chart(title, df, columns, xcolumn,xaxistype='category', charttype='bar',data
         data: {{
             x: "{xcolumn}",
             json: {a} ,
-            type: "{charttype}",
+            type: "{type}",
             labels: {datalabels}
         }},
         zoom: {{
