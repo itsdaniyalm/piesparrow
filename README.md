@@ -1,14 +1,15 @@
-![pieSparrow](https://piesparrow.itsdaniyalm.com/images/.png) #piesparrow
+![pieSparrow](https://piesparrow.itsdaniyalm.com/images/logo_button.png) 
 
-Version - Alpha 0.0.5, Release Date - 27-Nov-22
 
-[Website](https://piesparrow.itsdaniyalm.com) | [Docs](https://piesparrow.itsdaniyalm.com/docs.html) | [Examples](https://piesparrow.itsdaniyalm.com/examples.html) | [GitHub](https://github.com/itsdaniyalm/piesparrow)
+Version - 0.1.0, Release Date - 13-Nov-22
+
+[Website](https://piesparrow.itsdaniyalm.com) | [Release Note](https://piesparrow.itsdaniyalm.com/release.html) | [Docs](https://piesparrow.itsdaniyalm.com/docs.html) | [Examples](https://piesparrow.itsdaniyalm.com/examples.html) | [GitHub](https://github.com/itsdaniyalm/piesparrow)
 
 ---
-pieSparrow is a stupidly simple python package to create interactive HTML frontends and dashboards. It is built on top of the robust javascript charting library Chart.js while harnessing the power of light weight Milligram CSS framework for styling and data processing capabilities of Python through Pandas.
+piesparrow is a stupidly simple python package to create interactive HTML frontends and dashboards. It is built on top of the javascript charting library Billboard.js while harnessing the power of custom light weight Sparrow CSS framework for styling and data processing capabilities of Python through Pandas.
 ![pieSparrow Code](https://piesparrow.itsdaniyalm.com/images/header.png)
 
-## Code in Python deliver in HTML
+## Code in Python, Present in HTML
 Just import pieSparrow into your python script and perform data processingthrough Pandas as usual. When you are ready to visualize, call the relatedfunctions from pieSparrow to design your interactive dashboards and compose the HTML files by running your parent script in Python.
 
 ```
