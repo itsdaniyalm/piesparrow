@@ -1,4 +1,4 @@
-![pieSparrow](https://piesparrow.itsdaniyalm.com/images/icon.png)
+![pieSparrow](https://piesparrow.itsdaniyalm.com/images/.png) #piesparrow
 
 Version - Alpha 0.0.5, Release Date - 27-Nov-22
 
