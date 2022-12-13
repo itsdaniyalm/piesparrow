@@ -1,9 +1,0 @@
-LICENSE
-README.md
-pyproject.toml
-piesparrow/__init__.py
-piesparrow/piesparrow-pkg.py
-piesparrow.egg-info/PKG-INFO
-piesparrow.egg-info/SOURCES.txt
-piesparrow.egg-info/dependency_links.txt
-piesparrow.egg-info/top_level.txt
