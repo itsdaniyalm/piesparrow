@@ -3,6 +3,8 @@
 
 Version - 0.1.2, Release Date - 13-Nov-22
 
+![Downloads](https://pepy.tech/badge/piesparrow)
+
 [Website](https://piesparrow.itsdaniyalm.com) | [Release Notes](https://piesparrow.itsdaniyalm.com/release_notes.html) | [Docs](https://piesparrow.itsdaniyalm.com/docs.html) | [Examples](https://piesparrow.itsdaniyalm.com/examples.html) | [GitHub](https://github.com/itsdaniyalm/piesparrow)
 
 ---
